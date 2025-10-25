@@ -43,6 +43,9 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "groqApiKey": "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"
     }
   }
 }

@@ -1,0 +1,22 @@
+npm warn deprecated @types/react-native@0.73.0: This is a stub types definition. react-native provides its own type definitions, so you do not need this installed.
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn cleanup Failed to remove some directories [
+npm warn cleanup   [
+npm warn cleanup     '\\\\?\\D:\\FYP\\node_modules\\@react-native\\gradle-plugin',
+npm warn cleanup     [Error: EPERM: operation not permitted, rmdir 'D:\FYP\node_modules\@react-native\gradle-plugin\react-native-gradle-plugin'] {
+npm warn cleanup       errno: -4048,
+npm warn cleanup       code: 'EPERM',
+npm warn cleanup       syscall: 'rmdir',
+npm warn cleanup       path: 'D:\\FYP\\node_modules\\@react-native\\gradle-plugin\\react-native-gradle-plugin'
+npm warn cleanup     }
+npm warn cleanup   ]
+npm warn cleanup ]
+npm error code ERR_INVALID_ARG_TYPE
+npm error The "file" argument must be of type string. Received undefined
+npm error A complete log of this run can be found in: C:\Users\ACG\AppData\Local\npm-cache\_logs\2026-01-20T09_26_52_683Z-debug-0.log

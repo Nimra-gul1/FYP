@@ -1,0 +1,26 @@
+[
+  {
+    "ayah_arabic": "لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",
+    "translation": "Do not despair of the mercy of Allah.",
+    "emotion": "depression",
+    "theme_tags": [
+      "mercy",
+      "hope",
+      "forgiveness"
+    ],
+    "tafsir_summary": "Encourages believers not to lose hope, no matter how difficult life becomes.",
+    "context": "Surah Az-Zumar 39:53"
+  },
+  {
+    "ayah_arabic": "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+    "translation": "Indeed, with hardship [will be] ease.",
+    "emotion": "depression",
+    "theme_tags": [
+      "hope",
+      "patience",
+      "relief"
+    ],
+    "tafsir_summary": "A reminder that every trial carries within it the seed of ease and relief.",
+    "context": "Surah Ash-Sharh 94:6"
+  }
+]

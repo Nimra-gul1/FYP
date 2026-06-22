@@ -10,21 +10,19 @@ The mobile application analyzes user emotions using a Hugging Face NLP model and
 
 ## Key Features
 
-### Mobile Application
+### 📱 Mobile Application (Companion App)
+* **🧠 Deep Sentiment Analysis:** Emotion detection using real-time Hugging Face NLP models to understand nuanced states (Anxiety, Depression, Fear, Happiness).
+* **💬 Empathetic AI Conversations:** Personalized and dynamic AI responses that actively listen and provide judgment-free support.
+* **📖 Infallible Qur'anic Wisdom:** Contextually relevant Qur'anic verse recommendations and translations retrieved securely from a custom MongoDB dataset.
+* **🔒 Soulful Privacy:** Secure user authentication, profile management, and end-to-end anonymity.
+* **⚡ Seamless Syncing:** Real-time interaction with backend services for continuous support.
 
-* Emotion detection using AI-powered NLP models
-* Personalized and empathetic AI responses
-* Relevant Qur'anic verse recommendations with translations
-* Secure user authentication and profile management
-* Real-time interaction with backend services
-
-### Admin Panel
-
-* User management and monitoring
-* Red flag and crisis alert tracking
-* Hallucination detection and response validation
-* Content moderation and management
-* Analytics dashboard and system insights
+### 💻 Admin Panel (Web Dashboard)
+* **👥 User Operations:** Comprehensive user management and monitoring.
+* **🚨 Safety & Crisis Monitoring:** Automated tracking of red flags and crisis alerts.
+* **🕌 Truth Audit System:** Hallucination detection and strict response validation to ensure all Islamic content is 100% accurate.
+* **🛡️ Content Control:** Advanced moderation and intervention management.
+* **📊 Platform Telemetry:** A rich analytics dashboard detailing system insights, user sentiment trends, and AI performance.
 
 ---
 

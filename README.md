@@ -1,51 +1,94 @@
-# Welcome to your Expo app 👋
+<div align="center">
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Qalbify 💜
+  
+**An AI-Powered Emotional Support & Quranic Wisdom Platform**
 
-## Get started
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 
-1. Install dependencies
+</div>
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📖 About The Project
 
-   ```bash
-   npx expo start
-   ```
+Qalbify is a unified platform designed to provide empathetic, AI-driven emotional support integrated with infallible Quranic wisdom. It listens without judgment, understands emotional nuances in real-time using deep sentiment analysis, and shares healing wisdom in a private, secure environment.
 
-In the output, you'll find options to open the app in a
+### ✨ Key Features
+- **🧠 Deep Sentiment Analysis**: Real-time RoBERTa tracking to understand nuanced emotional states.
+- **📖 Infallible Wisdom**: Strict Uthmani script validation ensures zero hallucinations in sacred text.
+- **🔒 Soulful Privacy**: End-to-end anonymity protected by role-based architecture.
+- **📊 Admin Telemetry**: A comprehensive dashboard for administrators to monitor platform health, user progress, and safety escalations.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🏗️ Architecture & Project Structure
 
-## Get a fresh project
+This repository contains three core systems:
 
-When you're ready, run:
+| Directory | Component | Tech Stack | Description |
+| :--- | :--- | :--- | :--- |
+| **`/`** *(Root)* | **Mobile Companion** | React Native, Expo | The cross-platform mobile application used by end-users. |
+| **`/backend`** | **Core API Server** | Node.js, Express | Handles AI integrations, database logic, and API routes. |
+| **`/admin-panel`** | **Operations Hub** | React, Vite | The web dashboard for platform administrators. |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Before running the Qalbify ecosystem, ensure you have the following installed:
+* [Node.js](https://nodejs.org/) (v18 or higher recommended)
+* A running MongoDB database (local or Atlas)
+* A properly configured `.env` file (containing your OpenAI, Hugging Face, AssemblyAI, and MongoDB URIs).
+
+---
+
+### 1️⃣ Start the Backend Server
+The central brain of Qalbify. Must be running for the mobile app and admin panel to function.
 
 ```bash
-npm run reset-project
+cd backend
+npm install
+npm run dev
 ```
+> **Note:** The server will start on `http://localhost:5001` by default.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### 2️⃣ Start the Admin Portal (Web)
+The web interface for monitoring platform telemetry.
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+cd admin-panel
+npm install
+npm run dev
+```
+> **Access:** Open the provided local URL (usually `http://localhost:5173`) in your browser.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-## Add splash screens
-## Join the community
+#### 🔐 Default Administrator Access
+To access the dashboard, use the pre-configured credentials:
+* **Email:** `admin@qalbify.com`
+* **Password:** `admin123`
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 3️⃣ Start the Mobile Application (Expo)
+The front-facing mobile app for users.
 
+```bash
+# Make sure you are in the project root directory
+npm install
+npx expo start
+```
+> **Access:** Scan the QR code in the terminal with the **Expo Go** app on your physical device, or press `a` to open in an Android Emulator, or `i` for an iOS Simulator.
+
+---
+
+<div align="center">
+  <i>"Your heart deserves a caring companion."</i><br>
+  © 2026 Qalbify Operations.
+</div>

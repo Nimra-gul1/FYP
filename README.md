@@ -10,19 +10,106 @@ The mobile application analyzes user emotions using a Hugging Face NLP model and
 
 ## Key Features
 
-### 📱 Mobile Application (Companion App)
-* **🧠 Deep Sentiment Analysis:** Emotion detection using real-time Hugging Face NLP models to understand nuanced states (Anxiety, Depression, Fear, Happiness).
-* **💬 Empathetic AI Conversations:** Personalized and dynamic AI responses that actively listen and provide judgment-free support.
-* **📖 Infallible Qur'anic Wisdom:** Contextually relevant Qur'anic verse recommendations and translations retrieved securely from a custom MongoDB dataset.
-* **🔒 Soulful Privacy:** Secure user authentication, profile management, and end-to-end anonymity.
-* **⚡ Seamless Syncing:** Real-time interaction with backend services for continuous support.
+### 📱 Mobile Application Features
 
-### 💻 Admin Panel (Web Dashboard)
-* **👥 User Operations:** Comprehensive user management and monitoring.
-* **🚨 Safety & Crisis Monitoring:** Automated tracking of red flags and crisis alerts.
-* **🕌 Truth Audit System:** Hallucination detection and strict response validation to ensure all Islamic content is 100% accurate.
-* **🛡️ Content Control:** Advanced moderation and intervention management.
-* **📊 Platform Telemetry:** A rich analytics dashboard detailing system insights, user sentiment trends, and AI performance.
+**Secure Authentication**
+* User registration and login
+* Google OAuth integration
+* Password recovery via email
+
+**AI Emotional Chat Companion**
+* Real-time AI-powered emotional support
+* Context-aware conversations
+* Personalized empathetic responses
+* Conversation memory for smoother interactions
+
+**Emotion Detection**
+* Detects emotions such as sadness, anxiety, fear, stress, and joy
+* Real-time sentiment analysis using NLP models
+* Emotion tracking during conversations
+
+**Voice-to-Text Support**
+* Users can interact using voice input
+* Automatic speech-to-text conversion for chatbot conversations
+
+**Emotion-Based Qur'anic Guidance**
+* Recommends relevant Qur'anic verses based on detected emotions
+* Arabic text with English translation
+* Smart verse recommendation system
+* Prevents repetition of verses within the same session
+
+**Tafsir Integration**
+* Simplified and authentic Tafsir explanations
+* Displays verse meaning and context alongside recommendations
+
+**Personal Journaling**
+* Create, edit, view, and delete journal entries
+* Emotion-tagged reflections
+* Timestamped journal records
+* Emotional self-reflection and progress tracking
+
+**Progress & Activity Tracking**
+* Mood trend monitoring
+* User activity streaks
+* Emotional wellness insights
+
+**Chat Management**
+* Secure chat history storage
+* Clear chat functionality
+* Personalized chat experience
+
+**Privacy & Security**
+* JWT-based authentication
+* Bcrypt password hashing
+* K-Anonymity and Differential Privacy techniques
+* Secure data storage and transmission
+
+---
+
+### 🌐 Admin Panel Features
+
+**Admin Authentication**
+* Secure administrator login
+* Role-based access control
+
+**User Management**
+* View platform users
+* Block or unblock users
+* Monitor user activity
+
+**System Monitoring Dashboard**
+* Real-time platform monitoring
+* Overall system health tracking
+* Usage statistics and activity insights
+
+**Performance Analytics**
+* Tranquility Index monitoring
+* Crisis Rate analysis
+* Average session duration tracking
+* User engagement metrics
+
+**Red Flag Detection**
+* Detection of serious distress indicators
+* Monitoring of potentially harmful conversations
+* Real-time alert generation
+
+**Hallucination Detection & Validation**
+* Ensures AI responses remain accurate
+* Prevents generation of non-verified religious content
+
+**Content Management**
+* Manage Qur'anic content and guidance data
+* Maintain content authenticity and quality
+
+**Audit & Transparency Logs**
+* Track emotions associated with recommended verses
+* Maintain logs for accountability and analysis
+* Ensure all verses originate from verified datasets
+
+**Privacy-Preserving Analytics**
+* Aggregated system insights
+* User anonymity protection
+* Secure telemetry monitoring
 
 ---
 

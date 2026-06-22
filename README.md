@@ -269,9 +269,9 @@ Ensure that:
 
 ## Authors
 
--NIMRA GUL
--MARYAM SAFDAR
--SAMIYYA AFTAB
+*NIMRA GUL
+*MARYAM SAFDAR
+*SAMIYYA AFTAB
 
 **Qalbify FYP 2026**
 Bachelor of Software Engineering

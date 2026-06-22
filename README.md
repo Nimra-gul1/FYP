@@ -1,94 +1,189 @@
-<div align="center">
+# Qalbify – AI-Powered Spiritual and Emotional Companion
 
-# Qalbify 💜
-  
-**An AI-Powered Emotional Support & Quranic Wisdom Platform**
+## Overview
 
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+**Qalbify** is an AI-powered mobile and web platform designed to promote emotional and spiritual well-being. The platform combines Natural Language Processing (NLP) and Islamic guidance to provide users with personalized emotional support.
 
-</div>
+The mobile application analyzes user emotions using a Hugging Face NLP model and generates empathetic responses along with relevant Qur'anic verses and translations retrieved from a custom MongoDB dataset. The platform also features a comprehensive web-based administration panel for monitoring user activity, managing content, detecting hallucinations, tracking high-risk interactions, and analyzing system performance.
 
 ---
 
-## 📖 About The Project
+## Key Features
 
-Qalbify is a unified platform designed to provide empathetic, AI-driven emotional support integrated with infallible Quranic wisdom. It listens without judgment, understands emotional nuances in real-time using deep sentiment analysis, and shares healing wisdom in a private, secure environment.
+### Mobile Application
 
-### ✨ Key Features
-- **🧠 Deep Sentiment Analysis**: Real-time RoBERTa tracking to understand nuanced emotional states.
-- **📖 Infallible Wisdom**: Strict Uthmani script validation ensures zero hallucinations in sacred text.
-- **🔒 Soulful Privacy**: End-to-end anonymity protected by role-based architecture.
-- **📊 Admin Telemetry**: A comprehensive dashboard for administrators to monitor platform health, user progress, and safety escalations.
+* Emotion detection using AI-powered NLP models
+* Personalized and empathetic AI responses
+* Relevant Qur'anic verse recommendations with translations
+* Secure user authentication and profile management
+* Real-time interaction with backend services
 
----
+### Admin Panel
 
-## 🏗️ Architecture & Project Structure
-
-This repository contains three core systems:
-
-| Directory | Component | Tech Stack | Description |
-| :--- | :--- | :--- | :--- |
-| **`/`** *(Root)* | **Mobile Companion** | React Native, Expo | The cross-platform mobile application used by end-users. |
-| **`/backend`** | **Core API Server** | Node.js, Express | Handles AI integrations, database logic, and API routes. |
-| **`/admin-panel`** | **Operations Hub** | React, Vite | The web dashboard for platform administrators. |
+* User management and monitoring
+* Red flag and crisis alert tracking
+* Hallucination detection and response validation
+* Content moderation and management
+* Analytics dashboard and system insights
 
 ---
 
-## 🚀 Getting Started
+## Project Structure
 
-### Prerequisites
-Before running the Qalbify ecosystem, ensure you have the following installed:
-* [Node.js](https://nodejs.org/) (v18 or higher recommended)
-* A running MongoDB database (local or Atlas)
-* A properly configured `.env` file (containing your OpenAI, Hugging Face, AssemblyAI, and MongoDB URIs).
+```text
+/
+├── backend/         # Node.js & Express.js backend server
+├── admin-panel/     # React.js + Vite admin dashboard
+└── (root)           # React Native Expo mobile application
+```
 
 ---
 
-### 1️⃣ Start the Backend Server
-The central brain of Qalbify. Must be running for the mobile app and admin panel to function.
+## Prerequisites
+
+Before running the project, ensure the following are installed and configured:
+
+* Node.js
+* MongoDB (Local Instance or MongoDB Atlas)
+* Android Studio (for Android development)
+* Expo CLI
+* Environment variables configured in a `.env` file, including:
+
+  * OpenAI API Key
+  * Hugging Face API Key
+  * AssemblyAI API Key
+  * MongoDB Connection URI
+  * Other required service credentials
+
+---
+
+# Running the Project
+
+## 1. Backend Server
+
+The backend server must be running before starting either the mobile application or the admin panel.
+
+### Navigate to the backend directory
 
 ```bash
 cd backend
+```
+
+### Install dependencies
+
+```bash
 npm install
+```
+
+### Start the development server
+
+```bash
 npm run dev
 ```
-> **Note:** The server will start on `http://localhost:5001` by default.
+
+The backend server runs on **Port 5001** by default.
 
 ---
 
-### 2️⃣ Start the Admin Portal (Web)
-The web interface for monitoring platform telemetry.
+## 2. Admin Panel
+
+The admin dashboard provides administrative access to platform monitoring and management features.
+
+### Navigate to the admin panel directory
 
 ```bash
 cd admin-panel
-npm install
-npm run dev
 ```
-> **Access:** Open the provided local URL (usually `http://localhost:5173`) in your browser.
 
-#### 🔐 Default Administrator Access
-To access the dashboard, use the pre-configured credentials:
-* **Email:** `admin@qalbify.com`
-* **Password:** `admin123`
-
----
-
-### 3️⃣ Start the Mobile Application (Expo)
-The front-facing mobile app for users.
+### Install dependencies
 
 ```bash
-# Make sure you are in the project root directory
 npm install
-npx expo start
 ```
-> **Access:** Scan the QR code in the terminal with the **Expo Go** app on your physical device, or press `a` to open in an Android Emulator, or `i` for an iOS Simulator.
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:5173
+```
+
+### Default Admin Credentials
+
+| Field    | Value                                         |
+| -------- | --------------------------------------------- |
+| Email    | [admin@qalbify.com](mailto:admin@qalbify.com) |
+| Password | admin123                                      |
 
 ---
 
-<div align="center">
-  <i>"Your heart deserves a caring companion."</i><br>
-  © 2026 Qalbify Operations.
-</div>
+## 3. Mobile Application (Expo)
+
+### Navigate to the project root directory
+
+```bash
+cd ..
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Connect Android Device
+
+```bash
+adb pair <IP_ADDRESS>
+adb connect <IP_ADDRESS>
+```
+
+### Run the application
+
+```bash
+npx expo run:android
+```
+
+Ensure that:
+
+* USB debugging is enabled on your Android device.
+* Android Studio SDK and platform tools are properly configured.
+* The backend server is running before launching the application.
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* React Native (Expo)
+* React.js
+* Vite
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB Atlas
+
+### Artificial Intelligence & APIs
+
+* Hugging Face NLP Models
+* OpenAI API
+* AssemblyAI
+
+---
+
+## Authors
+
+**Qalbify FYP 2026**
+Bachelor of Software Engineering
+Riphah International University

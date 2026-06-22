@@ -1,0 +1,198 @@
+function TabHome({ setDT, adminStats, logout, adminName }) {
+  const modules = [
+    { id: "overview", label: "Overview Analysis", icon: "📊", desc: "Global project metrics & community health trends.", color: "#7c3aed" },
+    { id: "journeys", label: "User Journeys", icon: "🗺️", desc: "Detailed emotional mapping & healing trajectories.", color: "#6366f1" },
+    { id: "interventions", label: "AI Guidance", icon: "🛡️", desc: "Manage per-user custom AI support instructions.", color: "#10b981" },
+    { id: "activity", label: "Activity Feed", icon: "⚡", desc: "Live user engagement & interaction stream.", color: "#8b5cf6" },
+    { id: "sentiment", label: "Sentiment", icon: "📈", desc: "NLP emotional diversity & comunidade analytics.", color: "#f59e0b" },
+    { id: "alerts", label: "Red Flag Inbox", icon: "🚩", desc: "High-distress triggers & automated safety alerts.", color: "#ef4444" },
+    { id: "ai", label: "AI Performance", icon: "🤖", desc: "Monitor latency, token usage, and API costs.", color: "#7c3aed" },
+    { id: "auth", label: "System Access", icon: "🔑", desc: "Audit admin logs & session security events.", color: "#6366f1" },
+    { id: "hallucination", label: "Audit Logs", icon: "🔍", desc: "Verify Quranic accuracy & system truthfulness.", color: "#06b6d4" },
+    { id: "moderation", label: "Chat Moderation", icon: "💬", desc: "Review user chats, detect violations & block users.", color: "#f43f5e" },
+    { id: "reviews", label: "Reviews & Ratings", icon: "⭐", desc: "Community feedback, app ratings & satisfaction scores.", color: "#fbbf24" },
+    { id: "announcements", label: "Broadcast", icon: "📢", desc: "Send Islamic reminders & system-wide announcements to users.", color: "#c4b5fd" },
+  ];
+
+  return (
+    <div className="fa">
+      <div className="welcome-banner" style={{ 
+        background: '#0f172a',
+        border: '1px solid rgba(124, 58, 237, 0.4)',
+        overflow: 'hidden',
+        position: 'relative',
+        borderRadius: '32px',
+        padding: '3.5rem',
+        boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+      }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, #1e1b4b 0%, #0f172a 100%)', zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '100%', background: 'radial-gradient(circle at center, rgba(124, 58, 237, 0.1) 0, transparent 70%)', animation: 'auroraFlow 15s infinite alternate ease-in-out', filter: 'blur(80px)', zIndex: 1 }}></div>
+        <div style={{ position: 'absolute', bottom: '-40%', right: '-10%', width: '80%', height: '80%', background: 'radial-gradient(circle at center, rgba(79, 70, 229, 0.1) 0, transparent 70%)', animation: 'auroraFlow 12s infinite alternate-reverse ease-in-out', filter: 'blur(80px)', zIndex: 1 }}></div>
+
+        <div className="welcome-content" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.5rem' }}>
+             <div style={{ background: 'rgba(124, 58, 237, 0.1)', border: '1px solid #7c3aed', color: '#fff', padding: '6px 16px', borderRadius: '100px', fontSize: '0.75rem', fontWeight: 900, letterSpacing: '2px', boxShadow: '0 0 15px rgba(124, 58, 237, 0.4)' }}>PORTAL COMMAND</div>
+             <div style={{ width: '30px', height: '1px', background: 'rgba(255,255,255,0.2)' }}></div>
+             <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>System Active</div>
+          </div>
+          <h1 style={{ color: '#fff', fontSize: '3.8rem', fontWeight: 900, letterSpacing: '-2px', marginBottom: '1rem', lineHeight: 1.1, animation: 'fadeInUp 0.8s ease-out' }}>
+            Welcome, <span style={{ background: 'linear-gradient(to right, #fff, #c4b5fd)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{adminName || 'Maryam'}</span>.
+          </h1>
+          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.2rem', maxWidth: '650px', lineHeight: 1.6, fontWeight: 500, marginBottom: '2.5rem' }}>
+            Strategic oversight for the Qalbify spiritual ecosystem. Monitor global health metrics, coordinate AI interventions, and uphold community values.
+          </p>
+          <div className="welcome-stats" style={{ display: 'flex', gap: '2.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '1rem 1.8rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(124, 58, 237, 0.3)', borderRadius: '20px', animation: 'breathingGlow 4s infinite alternate', position: 'relative' }}>
+              <div style={{ fontSize: '2.4rem', fontWeight: 900, color: '#fff', letterSpacing: '-1px' }}>{adminStats?.kpis?.totalUsers || "158"}+</div>
+              <div style={{ height: '30px', width: '1px', background: 'rgba(124, 58, 237, 0.3)' }}></div>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontSize: '0.7rem', color: '#c4b5fd', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '1.5px' }}>Active</span>
+                <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>Users</span>
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '1rem 1.8rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(34, 197, 94, 0.2)', borderRadius: '20px', animation: 'breathingGlowGreen 4s infinite alternate-reverse' }}>
+              <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 15px #22c55e', animation: 'ping 2s infinite' }}></div>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontSize: '1.1rem', color: '#fff', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '2px' }}>Verified</span>
+                <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.5px' }}>System Status</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{ position: 'absolute', right: '-2%', top: '50%', transform: 'translateY(-50%) rotate(-15deg)', fontSize: '15rem', opacity: 0.03, pointerEvents: 'none', color: '#7c3aed' }}>🛡️</div>
+      </div>
+
+      <style>{`
+        @keyframes auroraFlow { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(5%, 5%) scale(1.1); } }
+        @keyframes breathingGlow { 0% { box-shadow: 0 0 10px rgba(124, 58, 237, 0.1); border-color: rgba(124, 58, 237, 0.2); } 100% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.3); border-color: rgba(124, 58, 237, 0.6); } }
+        @keyframes breathingGlowGreen { 0% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.1); } 100% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.2); border-color: rgba(34, 197, 94, 0.4); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes ping { 0% { transform: scale(1); opacity: 1; } 70%, 100% { transform: scale(2.5); opacity: 0; } }
+      `}</style>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', margin: '3rem 0' }}>
+        {[
+          { icon: '👥', label: 'Total Users', value: adminStats?.kpis?.totalUsers ?? '...', sub: 'Registered', color: '#7c3aed' },
+          { icon: '🚩', label: 'Red Flags', value: adminStats?.kpis?.redFlagsCount ?? '...', sub: 'Active Alerts', color: '#f43f5e' },
+          { icon: '🎯', label: 'Quranic Accuracy', value: `${adminStats?.kpis?.verifiedAccuracy ?? '...'}%`, sub: 'AI Guardrail', color: '#10b981' },
+          { icon: '📈', label: 'Tranquility Index', value: adminStats?.kpis?.tranquilityIndex ?? '...', sub: 'Community Pulse', color: '#fbbf24' },
+        ].map((s) => (
+          <div key={s.label} style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '28px', padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '0.8rem', backdropFilter: 'blur(20px)', transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)', boxShadow: '0 15px 40px rgba(0,0,0,0.3)', position: 'relative', overflow: 'hidden' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)'; e.currentTarget.style.borderColor = s.color; e.currentTarget.style.boxShadow = `0 25px 60px -10px ${s.color}33`; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0) scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.3)'; }} >
+            <div style={{ position: 'absolute', top: '-20px', left: '-20px', width: '80px', height: '80px', background: s.color, filter: 'blur(50px)', opacity: 0.1, pointerEvents: 'none' }}></div>
+            <div style={{ fontSize: '2.2rem', marginBottom: '0.5rem', position: 'relative' }}>{s.icon}</div>
+            <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#fff', lineHeight: 1, letterSpacing: '-1.5px' }}>{s.value}</div>
+            <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'rgba(255, 255, 255, 0.85)', textTransform: 'uppercase', letterSpacing: '1px' }}>{s.label}</div>
+            <div style={{ fontSize: '0.75rem', color: s.color, fontWeight: 800, letterSpacing: '0.5px' }}>{s.sub}</div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '16px', padding: '1rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem', backdropFilter: 'blur(8px)' }}>
+        <span style={{ fontSize: '0.72rem', fontWeight: 800, color: 'rgba(255,255,255,0.35)', letterSpacing: '1px', textTransform: 'uppercase' }}>Portal Status</span>
+        {[
+          { dot: '#10b981', label: 'Backend API', status: 'Online' },
+          { dot: '#10b981', label: 'AI Pipeline', status: 'Active' },
+          { dot: '#10b981', label: 'WebSocket', status: 'Connected' },
+          { dot: '#f59e0b', label: 'Hallucination Guard', status: 'Monitoring' },
+          { dot: '#10b981', label: 'MongoDB Atlas', status: 'Synced' },
+        ].map((srv) => (
+          <div key={srv.label} style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: srv.dot, boxShadow: `0 0 6px ${srv.dot}` }} />
+            <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.55)', fontWeight: 600 }}>{srv.label}</span>
+            <span style={{ fontSize: '0.7rem', color: srv.dot, fontWeight: 700 }}>{srv.status}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="section-heading" style={{ fontSize: '1.2rem', fontWeight: 900, color: '#c4b5fd', margin: '4rem 0 2rem', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <div style={{ width: '40px', height: '2px', background: 'linear-gradient(90deg, #7c3aed, transparent)' }}></div> Core Analytics
+      </div>
+      <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+        {modules.slice(0, 3).map((m) => (
+          <div key={m.id} className="nav-card" onClick={() => setDT(m.id)} style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(124, 58, 237, 0.2)', borderRadius: '24px', padding: '2.2rem', backdropFilter: 'blur(20px)', transition: 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '1.4rem', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-12px)'; e.currentTarget.style.borderColor = '#7c3aed'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(124, 58, 237, 0.3)'; e.currentTarget.style.background = 'rgba(124, 58, 237, 0.05)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(124, 58, 237, 0.2)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.02)'; }}>
+            <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '80px', height: '80px', background: m.color, filter: 'blur(50px)', opacity: 0.1, pointerEvents: 'none' }}></div>
+            <div className="nav-card-icon" style={{ width: '64px', height: '64px', borderRadius: '18px', background: `${m.color}15`, color: m.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', boxShadow: `0 10px 25px ${m.color}22`, border: `1px solid ${m.color}33` }}>{m.icon}</div>
+            <div className="nav-card-info"><h3 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#fff', marginBottom: '0.6rem', letterSpacing: '-0.5px' }}>{m.label}</h3><p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6, fontWeight: 500 }}>{m.desc}</p></div>
+          </div>
+        ))}
+      </div>
+
+      <div className="section-heading" style={{ fontSize: '1.2rem', fontWeight: 900, color: '#c4b5fd', margin: '4rem 0 2rem', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <div style={{ width: '40px', height: '2px', background: 'linear-gradient(90deg, #7c3aed, transparent)' }}></div> Interventions & Safety
+      </div>
+      <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+        {modules.slice(3, 6).map((m) => (
+          <div key={m.id} className="nav-card" onClick={() => setDT(m.id)} style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px', padding: '2rem', backdropFilter: 'blur(15px)', transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '1.2rem', position: 'relative', overflow: 'hidden' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.borderColor = m.color; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}>
+            <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '60px', height: '60px', background: m.color, filter: 'blur(40px)', opacity: 0.1, pointerEvents: 'none' }}></div>
+            <div className="nav-card-icon" style={{ width: '56px', height: '56px', borderRadius: '16px', background: `${m.color}20`, color: m.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', boxShadow: `0 8px 20px ${m.color}22` }}>{m.icon}</div>
+            <div className="nav-card-info"><h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: '0.5rem' }}>{m.label}</h3><p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, fontWeight: 500 }}>{m.desc}</p></div>
+          </div>
+        ))}
+      </div>
+
+      <div className="section-heading" style={{ fontSize: '1.2rem', fontWeight: 900, color: '#c4b5fd', margin: '4rem 0 2rem', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <div style={{ width: '40px', height: '2px', background: 'linear-gradient(90deg, #7c3aed, transparent)' }}></div> System & Health
+      </div>
+      <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+        {modules.slice(6, 9).map((m) => (
+          <div key={m.id} className="nav-card" onClick={() => setDT(m.id)} style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px', padding: '2rem', backdropFilter: 'blur(15px)', transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '1.2rem', position: 'relative', overflow: 'hidden' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.borderColor = m.color; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}>
+            <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '60px', height: '60px', background: m.color, filter: 'blur(40px)', opacity: 0.1, pointerEvents: 'none' }}></div>
+            <div className="nav-card-icon" style={{ width: '56px', height: '56px', borderRadius: '16px', background: `${m.color}20`, color: m.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', boxShadow: `0 8px 20px ${m.color}22` }}>{m.icon}</div>
+            <div className="nav-card-info"><h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: '0.5rem' }}>{m.label}</h3><p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, fontWeight: 500 }}>{m.desc}</p></div>
+          </div>
+        ))}
+      </div>
+
+      <div className="section-heading" style={{ fontSize: '1.2rem', fontWeight: 900, color: '#c4b5fd', margin: '4rem 0 2rem', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <div style={{ width: '40px', height: '2px', background: 'linear-gradient(90deg, #7c3aed, transparent)' }}></div> Community & Moderation
+      </div>
+      <div className="nav-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+        {modules.slice(9, 12).map((m) => (
+          <div key={m.id} className="nav-card" onClick={() => setDT(m.id)} style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px', padding: '2rem', backdropFilter: 'blur(15px)', transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '1.2rem', position: 'relative', overflow: 'hidden' }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-10px)'; e.currentTarget.style.borderColor = m.color; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}>
+            <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '60px', height: '60px', background: m.color, filter: 'blur(40px)', opacity: 0.1, pointerEvents: 'none' }}></div>
+            <div className="nav-card-icon" style={{ width: '56px', height: '56px', borderRadius: '16px', background: `${m.color}20`, color: m.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.8rem', boxShadow: `0 8px 20px ${m.color}22` }}>{m.icon}</div>
+            <div className="nav-card-info"><h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: '0.5rem' }}>{m.label}</h3><p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, fontWeight: 500 }}>{m.desc}</p></div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ marginTop: '5rem', background: 'rgba(255, 255, 255, 0.02)', borderTop: '1px solid rgba(255, 255, 255, 0.08)', padding: '4rem 6% 2.5rem', borderRadius: '60px 60px 0 0', margin: '5rem -6% 0', backdropFilter: 'blur(20px)' }}>
+        <div style={{ position: 'absolute', bottom: '-50px', left: '50%', transform: 'translateX(-50%)', width: '300px', height: '150px', background: 'rgba(124, 58, 237, 0.15)', filter: 'blur(80px)', pointerEvents: 'none' }}></div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', position: 'relative', zIndex: 2 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: '#7c3aed', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem' }}>🛡️</div>
+              <h3 style={{ fontSize: '1.4rem', fontWeight: 900, margin: 0, letterSpacing: '-0.5px' }}>Qalbify</h3>
+            </div>
+            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, fontWeight: 500 }}>A secure command center for monitoring, guiding, and protecting the Qalbify spiritual well-being community.</p>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              {['AI-Powered', 'Quran-Guided', 'Privacy-First'].map(t => (
+                <span key={t} style={{ fontSize: '0.65rem', padding: '4px 10px', background: 'rgba(124, 58, 237, 0.15)', border: '1px solid rgba(124, 58, 237, 0.3)', color: '#c4b5fd', borderRadius: '100px', fontWeight: 800, textTransform: 'uppercase' }}>{t}</span>
+              ))}
+            </div>
+          </div>
+          <div><h4 style={{ fontSize: '0.75rem', fontWeight: 900, color: '#fff', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '1.5rem' }}>Modules</h4>{['Analytics Overview', 'User Journeys', 'AI Guidance', 'Sentiment Analysis', 'Red Flag Inbox'].map(link => ( <div key={link} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)', marginBottom: '0.7rem', cursor: 'pointer', transition: '0.3s', fontWeight: 500 }} onMouseEnter={e => { e.target.style.color = '#9D50BB'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={e => { e.target.style.color = 'rgba(255,255,255,0.45)'; e.target.style.transform = 'translateX(0)'; }}>{link}</div> ))}</div>
+          <div><h4 style={{ fontSize: '0.75rem', fontWeight: 900, color: '#fff', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '1.5rem' }}>System</h4>{['Activity Feed', 'AI Performance', 'System Access', 'Audit Logs', 'Hallucination Guard'].map(link => ( <div key={link} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)', marginBottom: '0.7rem', cursor: 'pointer', transition: '0.3s', fontWeight: 500 }} onMouseEnter={e => { e.target.style.color = '#9D50BB'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={e => { e.target.style.color = 'rgba(255,255,255,0.45)'; e.target.style.transform = 'translateX(0)'; }}>{link}</div> ))}</div>
+          <div><h4 style={{ fontSize: '0.75rem', fontWeight: 900, color: '#fff', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '1.5rem' }}>Legal & Info</h4>{['Privacy Policy', 'Terms of Use', 'Data Governance', 'Admin Guidelines', 'Support'].map(link => ( <div key={link} style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)', marginBottom: '0.7rem', cursor: 'pointer', transition: '0.3s', fontWeight: 500 }} onMouseEnter={e => { e.target.style.color = '#9D50BB'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={e => { e.target.style.color = 'rgba(255,255,255,0.45)'; e.target.style.transform = 'translateX(0)'; }}>{link}</div> ))}</div>
+        </div>
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '2rem', marginTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
+          <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.3)', fontWeight: 600 }}>© {new Date().getFullYear()} Qalbify. All rights reserved.</span>
+          <div style={{ display: 'flex', gap: '2rem' }}>{['v1.0.4', 'OpenAI Powered', 'MongoDB Atlas', 'Secure Portal'].map(t => ( <span key={t} style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.15)', fontWeight: 800, letterSpacing: '0.8px', textTransform: 'uppercase' }}>{t}</span> ))}</div>
+        </div>
+      </div>
+    </div>
+  );
+}

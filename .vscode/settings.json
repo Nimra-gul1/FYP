@@ -1,0 +1,12 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  },
+  "java.jdt.ls.java.home": "C:\\Program Files\\Android\\Android Studio\\jbr",
+  "java.import.gradle.java.home": "C:\\Program Files\\Android\\Android Studio\\jbr",
+  "gradle.javaDebug.cleanOutput": false,
+  "gradle.javaHome": "C:\\Program Files\\Android\\Android Studio\\jbr",
+  "java.compile.nullAnalysis.mode": "automatic"
+}

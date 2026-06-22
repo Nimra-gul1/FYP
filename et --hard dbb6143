@@ -1,0 +1,14 @@
+[33meb7a22a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33m1589352[m HEAD@{1}: reset: moving to origin/main
+[33mb395520[m HEAD@{2}: reset: moving to origin/main
+[33mdbb6143[m HEAD@{3}: commit: Resolved conflict
+[33mad6c7f8[m HEAD@{4}: pull origin main: Fast-forward
+[33mda2361b[m HEAD@{5}: reset: moving to HEAD
+[33mda2361b[m HEAD@{6}: reset: moving to origin/main
+[33mf563c05[m HEAD@{7}: reset: moving to origin/main
+[33m8828583[m HEAD@{8}: commit: resolve conflict
+[33md22aab6[m HEAD@{9}: pull origin main: Fast-forward
+[33meff5c10[m HEAD@{10}: reset: moving to HEAD
+[33meff5c10[m HEAD@{11}: pull origin main: Fast-forward
+[33m0a0f3b0[m HEAD@{12}: reset: moving to HEAD
+[33m0a0f3b0[m HEAD@{13}: clone: from https://github.com/Nimra-gul1/FYP.git

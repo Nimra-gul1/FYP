@@ -1,0 +1,78 @@
+[33m5a8a5f5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m  Enhanced Qalbify with structured conversation flow (healing phases), improved emotion handling, added WebSocket live activity, session tracking, crisis handling, and upgraded admin dashboard features.
+[33m58cc9c4[m UI polish: Admin dashboard charts and marquee fix
+[33m1e42e50[m Updated admin panel login/register screen and enhanced overall UI.
+[33mb824c45[m added loader fixed ui and resolved other ui related issues
+[33m99746a7[m fixed google logout issue and resolved ui issues
+[33m95a3442[m Updated logo image
+[33m509afeb[m Updated logo image
+[33m00408df[m  enhanced login screen
+[33m30102a3[m UI: balanced spacing
+[33m06391d9[m UI: Final balanced spacing for header and chat bubbles
+[33m06d77c9[m Fix chat bubble padding and refine navigation bar theme
+[33mb92fcb5[m Add age-adaptive tone and human-first personality
+[33m1a1081f[m Enhance chatbot empathy and refine UI alignment
+[33m39ea13a[m Fix syntax error and currentStreak declaration for Vercel
+[33mbf25e71[m Fix password reset email and stabilize Vercel deployment
+[33m1854817[m fix: streak logic refinement, UI alignment, and Android clipping fixes
+[33m5c17f1c[m fix: app stability, navigation cleanup, minor fixes
+[33meb7a22a[m Fix: Synchronize Auth endpoints, assign Admin roles, and stabilize build environment
+[33m1589352[m feat: add recommend to friend sharing feature
+[33mfb03523[m Implement global themes, stable UI rendering, and layout refinements
+[33m7a7fefe[m fix: streak accuracy and timezone synchronization
+[33m30c529d[m feat: finalize branding and production readiness
+[33ma0f4f36[m refactor: implement full application responsiveness for Android
+[33mb395520[m feat(feedback): add rating system with API, UI, and admin analytics
+[33ma84e971[m feat: improve UI, streak tracking, and auth flow
+[33m88207e2[m  optimize dashboard scrolling
+[33m7dfd1a6[m feat: polish for chatbot UI and customize modal
+[33mcbbb9a4[m Admin Dashboard Final Restoration: Fixed analytics crashes, corrected KPI counts, and enabled real-time database charts
+[33mecd14ab[m feat: implement real-time analytics and improve admin dashboard functionality
+[33m478dda3[m fix(chatbot): improve chat flow & fix bugs
+[33mfdd222a[m fix(chatbot): enforce strict session emotion tracking and verse gating
+[33mad6c7f8[m feat: switch to permanent Vercel backend (qalbify-backend.vercel.app)
+[33m7f7bbbf[m feat: global access via localtunnel + Qalbify rebranding + centralized API utility
+[33m5ce7b36[m Dashboard synchronization: Push active users to top of list and enable 'Active on App Open' presence tracking
+[33mda2361b[m Final dashboard accuracy fixes: Prioritize Active status for admins, refined session math, and intuitive activity labels (Away, Offline, Inactive)
+[33mdad2ba9[m Synchronize website chatbot with mobile: Fixed broken goodbye logic, implemented raw verse display, and synchronized backend-driven offers and reflections.
+[33mdb98ccf[m Admin panel optimization: Mandatory login for new visitors, real-time status (5m threshold), and session tracking fixes
+[33mf30ddda[m Auto-greeting stabilization: Ensure fresh start greetings on every launch for App and Web
+[33m15f7728[m Update AI rules to enforce Passive Memory: history is background info only, enabling fresh starts without prodding old topics
+[33m0e490cd[m Fix verse trigger logic: Use total DB count for user messages and strengthen AI lead-in prompt
+[33mc83398c[m Synchronize chatbot verse logic: Backend-driven offers, raw MongoDB data display, and AI reflection
+[33mf563c05[m Update verse display format in mobile app to include Translation and Explanation/Tafsir from MongoDB
+[33mf06f6aa[m Fix verse endpoint: return verseKey for deduplication, full Surah+Ayah reference, and respect usedVerseKeys from frontend
+[33mf1d346b[m Fix MongoDB connection caching for Vercel serverless — prevents buffering timeout on cold starts
+[33md22aab6[m Refine chatbot: improved tone layers, emotion detection, verse offer system, medical redirect, and banned hollow phrases
+[33me61af4e[m Centralize chatbot AI logic in backend — single source of truth for App and Website
+[33mf7e4060[m Fix CORS issue blocking Vercel frontend from connecting to Vercel backend
+[33m6dd1320[m Update frontend constants to use VITE_API_BASE from environment instead of hardcoded localhost
+[33m8f33147[m Change multer to use memory storage to fix Vercel read-only filesystem crash
+[33m4be7bbc[m Fix root crash in Vercel caused by missing MONGO_URI
+[33ma0211dd[m Add Vercel config for backend to avoid credit card requirements
+[33m27fa3ca[m Finalize Qalbify deployment changes and backend improvements
+[33meff5c10[m Finalization of Qalbify Admin Console & Security Infrastructure
+[33m0a0f3b0[m Restored 10-message verse offers and humanized chatbot flow on App and Web
+[33mad2d8b9[m added real-time privacy features: hidden user emails to protect identities and live data charts
+[33m138df73[m feat(dashboard): connected admin portal to live MongoDB telemetry for real-time tracking, mapped active user sessions and sentiments, and fixed CSS layout overlap.
+[33mab55387[m Website updates: Fixed login routing to open the Home page first, and replaced negative Chatbot placeholder words with safe/positive phrasing.
+[33madb99b5[m Added a secure Admin Panel to view user stats Added the Qalbify Chatbot to the website Connected the chatbot to the backend and MongoDB database Made API keys private and secure on the server
+[33m3fee2f1[m fixed login route and added google signin package
+[33m0719feb[m resolved google signup issue
+[33m63dd6ae[m resolved google signup issue
+[33m131d2c9[m update splash screen
+[33me896109[m Updated chatbot prompt: avoid irrelevant past topics and long paragraphs, make responses short and natural
+[33mfe660d1[m Improved system prompt logic and emotional flow
+[33m57f2932[m Replaced Groq API with OpenAI API integration
+[33m447f0bd[m Stop tracking environment variables files
+[33m5980345[m Enhanced chatbot: curious, engaging, match energy, emotion detection + verse integration
+[33m6df807a[m Added Match Energy mode: bot now matches user message length, stopped asking repeated feeling questions, and replies more like a real friend
+[33mcc23dea[m Implemented emotion detection for Happiness, Anxiety, Depression, and Fear; triggers verse retrieval from MongoDB after every 10 messages with proper ayah text, translation, and explanation
+[33m2744b06[m Refined chatbot personality guidelines: made responses more natural and human-like, removed robotic phrases, avoided emotional exaggeration, reduced unnecessary negativity, improved conversational flow, and kept replies simple and relatable
+[33m2dae68f[m Rename assistant from Luna to Qalbify
+[33m14aed13[m Show voice text in input box and keep audio playback
+[33mce76284[m Updated chatbot: - Keeps last 50 messages in memory & DB - Gen-Z friendly, casual tone - Shows Quran verse only after 10 messages or when asked - Chat history stays until user clears it
+[33m83d7169[m Refactored chatbot logic to enhance user experience: - Implemented emotion-based conversation flow with memory of previous messages - Adopted friendly, respectful Gen-Z style responses that avoid stress and include casual distractions - Controlled Quran verse offering: only after analyzing ~10 messages, once per scenario, and no repetition until user requests or next suitable context - Ensured natural greetings vary each session - Removed Reset Personality option and Delete Chat button functionality to simplify UI and prevent accidental data loss - Preserved conversation history invisibly while maintaining smooth, natural chat flow
+[33m2537557[m - Quran dataset uploaded to MongoDB Atlas (cloud database) - Chatbot now fetches responses directly from the dataset
+[33mb4c3fa4[m Update journal.txt (delete edit functionality) and set the interface ++ added Screen1logo
+[33m1a3e6e9[m Resolve journal feature issue by connecting it to MongoDB
+[33m80bf4a8[
